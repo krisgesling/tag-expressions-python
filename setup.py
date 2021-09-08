@@ -29,10 +29,6 @@ python_version = float('%s.%s' % sys.version_info[:2])
 README = os.path.join(HERE, "README.rst")
 long_description = ''.join(open(README).readlines()[4:])
 
-use_2to3_enabled = False
-if python_version >= 3.0:
-    use_2to3_enabled = True
-
 
 # -----------------------------------------------------------------------------
 # UTILITY:
@@ -54,7 +50,7 @@ def find_packages_by_root_package(where):
 # -----------------------------------------------------------------------------
 setup(
     name = "cucumber-tag-expressions",
-    version = "3.0.1",
+    version = "3.0.1.dev1",
     author = "Jens Engel",
     author_email = "jenisys@noreply.github.com",
     url = "https://github.com/cucumber/tag-expressions-python",
@@ -96,10 +92,7 @@ setup(
         "Environment :: Console",
         "Intended Audience :: Developers",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: Implementation :: CPython",
@@ -108,6 +101,5 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "License :: OSI Approved :: BSD License",
     ],
-    platforms = ['any'],
-    use_2to3 = use_2to3_enabled
+    platforms = ['any']
 )
